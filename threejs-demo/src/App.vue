@@ -30,24 +30,27 @@ export default Vue.extend({
 			 * 1.第一个参数是视野，
 			 */
 
-
-			// const geometry = new THREE.BoxGeometry(1, 1, 1);
-			// const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-			// const cube = new THREE.Mesh(geometry, material);
-			// scene.add(cube);
+			// 创建几何
+			const geometry = new THREE.BoxGeometry(1, 1, 1);
+			// 创建材质
+			const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+			// 创建啮合，即将几何与材质结合起来。它能够被置入场景，并且自由移动
+			const cube = new THREE.Mesh(geometry, material);
+			scene.add(cube);
 
 			// camera.position.z = 5;
 
-			// const animate = function animate() {
-			// 	requestAnimationFrame(animate);
+			// 创建渲染loop，每秒60次渲染
+			const animate = function animate() {
+				// 类似于settimeout
+				requestAnimationFrame(animate);
 
-			// 	cube.rotation.x += 0.01;
-			// 	cube.rotation.y += 0.01;
+				// 	cube.rotation.x += 0.01;
+				// 	cube.rotation.y += 0.01;
+				renderer.render(scene, camera);
+			};
 
-			// 	renderer.render(scene, camera);
-			// };
-
-			// animate();
+			animate();
     },
     methods: {
       init() {
