@@ -1,0 +1,23 @@
+{
+  "id": "1617127",
+  "name": "大屏展示",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "5982854",
+      "name": "开关",
+      "font_class": "kaiguan",
+      "unicode": "ec76",
+      "unicode_decimal": 60534
+    },
+    {
+      "icon_id": "11806536",
+      "name": "电源开关",
+      "font_class": "dianyuankaiguan",
+      "unicode": "e670",
+      "unicode_decimal": 58992
+    }
+  ]
+}
