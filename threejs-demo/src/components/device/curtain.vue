@@ -13,24 +13,7 @@
         <div class="state">{{state.label}}</div>
       </li>
     </div>
-    <!-- 2键开关 -->
-    <div class="row device_icon_lists">
-      <li class="device_icon" v-for="state in stateList" :key="state.label">
-        <div class="icon">
-          <CtrlLn2 :inOnline="state.online" :isBind="state.bind"/>
-        </div>
-        <div class="state">{{state.label}}</div>
-      </li>
-    </div>
-    <!-- 3键开关 -->
-    <div class="row device_icon_lists">
-      <li class="device_icon" v-for="state in stateList" :key="state.label">
-        <div class="icon">
-          <CtrlLn3 :inOnline="state.online" :isBind="state.bind"/>
-        </div>
-        <div class="state">{{state.label}}</div>
-      </li>
-    </div>
+
     <!-- tooltip -->
     <div>tip</div>
     <div class="tool-tip device_icon">
@@ -64,22 +47,18 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import CtrlLn1 from './svg/ctrl_ln/1.vue';
-import CtrlLn2 from './svg/ctrl_ln/2.vue';
-import CtrlLn3 from './svg/ctrl_ln/3.vue';
+import CtrlLn1 from './svg/curtain/1.vue';
 
 
 export default Vue.extend({
     name: 'introduce',
     components: {
       CtrlLn1,
-      CtrlLn2,
-      CtrlLn3
     },
     data() {
         return {
-            name_cn: '墙壁开关',
-            name_en: 'lumi.ctrl_ln1/2/3',
+            name_cn: '智慧窗帘',
+            name_en: 'lumi.curtain',
             stateList: [{
               online: true,
               bind: true,

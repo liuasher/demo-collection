@@ -13,7 +13,17 @@
           </path>
         </svg>
       <div class="block in-shape">
-        <div class="line"></div>
+        <div class="item">
+          <div class="line-1 line"></div>
+        </div>
+        <div class="line-2 line"></div>
+        <div class="item">
+          <div class="line-1 line"></div>
+        </div>
+        <div class="line-2 line"></div>
+        <div class="item">
+          <div class="line-1 line"></div>
+        </div>
       </div>
     </div>
     <!-- <div :class="{
@@ -62,18 +72,31 @@ export default Vue.extend({
   display: flex;
 }
 
+.item{
+  width: .7vw;
+}
+.line{
+  // width: 1.7vw;
+  height: 2px;
+  border-radius: 2px;
+  
+}
+.line-1{
+  width: .5vw;
+  margin-top: 4px;
+  margin-left: 0.1vw;
+}
+.line-2{
+  width: 1px;
+  height: 2.3vw;
+}
+
 .bg-svg{
   position: absolute;
   width: 100%;
   height: 100%;
 }
-.line{
-  width: 1.7vw;
-  height: 2px;
-  border-radius: 2px;
-  margin-top: 4px;
-  margin-left: 0.3vw;
-}
+
 
 .svg{
   position: absolute;

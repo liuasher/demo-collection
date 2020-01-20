@@ -13,7 +13,12 @@
           </path>
         </svg>
       <div class="block in-shape">
-        <div class="line"></div>
+        <svg t="1579426621744" class="bg-svg" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="12646" width="40" height="40">
+          <path 
+            :fill="inOnline ? '#3481cf': '#a7a7a7'"
+            d="M519.552 256a32 32 0 0 0-32 32v128a32 32 0 0 0 64 0V288a32 32 0 0 0-32-32zM348.384 520.32a32 32 0 1 0-56.768 29.568l72.32 136.896a32 32 0 1 0 56.768-29.568l-72.32-136.896zM727.104 506.72a32 32 0 0 0-43.168 13.6l-72.32 136.896a32 32 0 1 0 56.768 29.568l72.32-136.896a32 32 0 0 0-13.6-43.168z" p-id="13329">
+          </path>
+        </svg>
       </div>
     </div>
     <!-- <div :class="{
@@ -77,7 +82,7 @@ export default Vue.extend({
 
 .svg{
   position: absolute;
-  width: 98%;
+  width: 100%;
   height: 100%;
 }
 // isOnline 改变颜色

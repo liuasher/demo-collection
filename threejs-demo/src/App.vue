@@ -21,6 +21,14 @@
     <gateway/>
     <!-- 墙壁开关 -->
     <ctrl-ln/>
+    <!-- 墙体插座 -->
+    <Plug/>
+    <!-- 智能窗帘 -->
+    <Curtain/>
+    <!-- LED灯泡 -->
+    <Light/>
+    <!-- 智能面板 -->
+    <Controller/>
   </div>
 </template>
 
@@ -36,6 +44,11 @@ import SenIll from '@/components/device/sen_ill.vue';
 import SensorCube from '@/components/device/sensor_cube.vue';
 import Gateway from '@/components/device/gateway.vue';
 import CtrlLn from '@/components/device/ctrl_ln.vue';
+import Plug from '@/components/device/plug.vue';
+import Curtain from '@/components/device/curtain.vue';
+import Light from '@/components/device/light.vue';
+import Controller from '@/components/device/controller.vue';
+
 
 export default Vue.extend({
     name: 'introduce',
@@ -54,7 +67,11 @@ export default Vue.extend({
       SenIll,
       SensorCube,
       Gateway,
-      CtrlLn
+      CtrlLn,
+      Plug,
+      Curtain,
+      Light,
+      Controller
 		},
     mounted() {
 		
