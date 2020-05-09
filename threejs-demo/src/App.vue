@@ -29,7 +29,7 @@ import _ from 'lodash';
 import Data from './data.ts';
 
 const SIZE = 35;
-const ISSUE_COUNT = 100;
+const ISSUE_COUNT = Data.length;
 
 // const LASTED = [];
 
@@ -83,8 +83,9 @@ export default Vue.extend({
                     this.dataCube[prev][index].counts = (nextValue.indexOf(index) !== -1)
                         ? this.dataCube[prev][index].counts + 1
                         : this.dataCube[prev][index].counts;
-
-                    this.dataCube[prev][index].keys.push(prevKey);
+                    if (nextValue.indexOf(index) !== -1) {
+                        this.dataCube[prev][index].keys.push(prevKey);
+                    }
                 }
             });
         },
