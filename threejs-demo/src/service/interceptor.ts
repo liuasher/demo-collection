@@ -6,7 +6,7 @@ import { localHost, testEnv } from './config';
 const routerInterceptor = function routerJumpInterceptor(router: any) {
     router.beforeEach((to: any, from: any, next: any) => {
         // Add your code
-        console.log(to, from);
+
         next();
     });
 };
