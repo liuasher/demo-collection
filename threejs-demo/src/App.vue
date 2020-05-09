@@ -26,7 +26,7 @@
 <script lang="ts">
 import Vue from 'vue';
 import _ from 'lodash';
-import Data from './data';
+import Data from './data.ts';
 
 const SIZE = 31;
 
@@ -44,7 +44,8 @@ export default Vue.extend({
 
     },
     mounted() {
-        this.startStatistics(Data);
+        // console.log(111, Data.reverse());
+        this.startStatistics(Data.reverse());
     },
     methods: {
 

@@ -1,8 +1,16 @@
-export default [
-    ['NO-001', [2, 4, 5, 6, 7]],
-    ['NO-002', [1, 2, 3, 4, 9]],
-    ['NO-003', [3, 4, 6, 7, 9]],
-    ['NO-004', [3, 5, 8, 9, 10]],
-    ['NO-005', [1, 2, 4, 7, 9]],
-    ['NO-006', [1, 4, 6, 7, 10]],
-];
+import DATA_JSON from './data.json';
+
+const result: any[][] = [];
+
+DATA_JSON.data.forEach((issue: any) => {
+    const array: number[] = [];
+    issue.resultArea1.split(',').forEach((number: string) => {
+        array.push(Number(number));
+    });
+    result.push([
+        issue.issueNo,
+        array
+    ]);
+});
+
+export default result;
