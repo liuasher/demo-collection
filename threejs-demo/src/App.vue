@@ -28,9 +28,10 @@ import Vue from 'vue';
 import _ from 'lodash';
 import Data from './data.ts';
 
-const SIZE = 31;
+const SIZE = 35;
+const ISSUE_COUNT = 100;
 
-const LASTED = [2, 5, 8, 9, 10];
+// const LASTED = [];
 
 export default Vue.extend({
     name: 'introduce',
@@ -40,16 +41,19 @@ export default Vue.extend({
             dataCube: cube
         };
     },
-    components: {
-
+    computed: {
+        FINALL_LISTS() {
+            return Data.reverse().slice(0, ISSUE_COUNT);
+        }
     },
     mounted() {
-        // console.log(111, Data.reverse());
-        this.startStatistics(Data.reverse());
+        this.startStatistics(this.FINALL_LISTS);
     },
     methods: {
 
         isLasted(num) {
+            const LASTED = this.FINALL_LISTS[ISSUE_COUNT - 1][1];
+
             return LASTED.indexOf(num) !== -1;
         },
         /**
@@ -60,6 +64,7 @@ export default Vue.extend({
             for (let index = 0; index < Dict.length - 1; index += 1) {
                 const prev = Dict[index];
                 const next = Dict[index + 1];
+
                 this.compareData({
                     prevKey: prev[0], prevValue: prev[1]
                 }, {
