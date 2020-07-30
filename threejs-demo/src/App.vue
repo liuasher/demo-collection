@@ -9,6 +9,7 @@
     <div>feat:hote2</div>
     <div>feat:iiap</div>
     <div>feat:iiap2</div>
+    <div>feat:bugfix</div>
     <router-link :to="{ name: 'Page1' }"> page1 </router-link>
     <router-view> </router-view>
   </div>
