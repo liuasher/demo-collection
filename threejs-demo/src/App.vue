@@ -7,6 +7,8 @@
     <div>feat:ops4</div>
     <div>feat:hotel</div>
     <div>feat:hote2</div>
+    <div>feat:iiap</div>
+    <div>feat:iiap2</div>
     <router-link :to="{ name: 'Page1' }"> page1 </router-link>
     <router-view> </router-view>
   </div>
