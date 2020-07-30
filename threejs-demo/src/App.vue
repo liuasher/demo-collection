@@ -5,6 +5,9 @@
     <div>feat:ops2</div>
     <div>feat:ops3</div>
     <div>feat:ops4</div>
+    <div>feat:ops5</div>
+    <div>feat:ops6</div>
+    <div>feat:ops7</div>
     <div>feat:hotel</div>
     <div>feat:hote2</div>
     <div>feat:hote3</div>
